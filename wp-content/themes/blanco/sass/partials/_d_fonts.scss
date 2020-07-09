@@ -1,0 +1,296 @@
+////////////////////////////////////////////////////////////////////////////
+///****   typography     typography     typography     typography   ****///
+///////////////////////////////////////////////////////////////////////////
+
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("../fonts/Euclid/EuclidCircularB-Regular.woff2") format("woff2"),
+    url("../fonts/Euclid/EuclidCircularB-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Euclid Triangle";
+  src: url("../fonts/Euclid/EuclidTriangle-Semibold.woff2") format("woff2"),
+    url("../fonts/Euclid/EuclidTriangle-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Euclid Triangle';
+//     src: url('../fonts/Euclid/EuclidTriangle-Bold.woff2') format('woff2'),
+//         url('../fonts/Euclid/EuclidTriangle-Bold.woff') format('woff');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// used on nav bar
+@font-face {
+  font-family: "Euclid Circular B";
+  src: url("../fonts/Euclid/EuclidCircularB-Medium.woff2") format("woff2"),
+    url("../fonts/Euclid/EuclidCircularB-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/// sets the html global font size when your font-size is in REMS then it will change accordingly
+html {
+  font-size: 14px;
+
+  // @media (min-width: $media-sml) {font-size:14px}
+  @media (min-width: $media-med) {
+    font-size: 16px;
+  }
+
+  // @media (min-width: $media-lrg) {font-size:18px}
+  // @media (min-width: $media-lrg-xl) {font-size:19px}
+}
+
+body {
+  font-family: "Euclid Circular B", Arial, Helvetica, sans-serif;
+  color: $font-body;
+  // background-color: blue;
+
+  // @include media-sml {
+  // 	@include b2(green)
+  // }
+
+  @include media-med {
+    // @include b1(yellow);
+  }
+
+  // @include media-lrg {
+  // 	@include b1();
+  // }
+
+  // @include media-lrg-xl {
+  // 	@include b2(blue);
+  // }
+}
+
+h1,
+h2 {
+  font-family: "Euclid Triangle", Arial, Helvetica, sans-serif;
+  // font-size: 44px
+
+  @include fontSize(34px);
+
+  @include media-med {
+    @include fontSize(44px);
+  }
+
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  line-height: 1.1;
+  // @include b1();
+}
+
+.h1-large {
+  @include fontSize(52px);
+
+  @include media-med {
+    @include fontSize(58px);
+  }
+}
+
+.h2-small {
+  // font-size: 24px;
+  @include fontSize(24px);
+}
+
+// .section-header {
+// 	color: white;
+// }
+
+h3 {
+  // font-size: 18px;
+  font-family: "Euclid Circular B", Arial, Helvetica, sans-serif;
+  @include fontSize(18px);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    // text-decoration: underline;
+    // @include b1();
+    color: white;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  span {
+    // @include b1();
+  }
+}
+
+.hover-yellow {
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    // text-decoration: underline;
+    // @include b1();
+    color: white;
+
+    &:hover {
+      color: #fed731;
+    }
+  }
+}
+
+// .white-blurb{
+// 	color: white;
+// }
+//used in footer
+h4 {
+  @include fontSize(18px);
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+//used in footer
+h5 {
+  @include fontSize(16px);
+  line-height: 1.4;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+small {
+  @include fontSize(14px);
+}
+
+////****href ****/////
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: $pink;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.colored-link {
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: $pink;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+
+////**** lists ****/////
+// ul {
+// 	margin-bottom: 1rem;
+// }
+
+// li {
+// 	@include fontSize(16px);
+// 	line-height: 1.4;
+// 	font-weight: 300;
+// 	list-style: none;
+// 	list-style-position: inside;
+// }
+
+// li::before {
+// 	content: " - "
+// }
+
+////**** quotes ****/////
+em {
+  font-style: italic;
+}
+
+em::before {
+  content: '"';
+}
+
+em::after {
+  content: '"';
+}
+
+////**** blockquote ****////
+blockquote {
+  margin: 1rem 1rem;
+  padding-left: 1rem;
+  font-style: italic;
+  color: darkslategray;
+  border-left: 1px solid;
+  line-height: 1.5;
+}
+
+////**** text transform ****////
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.highlight {
+  color: yellow;
+  background-color: pink;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}

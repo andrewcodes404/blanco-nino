@@ -1,0 +1,7 @@
+
+sass --watch sass/style.scss:style/style-custom.css
+browser-sync start -p "https://blanco.local/" --files="**/*"
+
+
+// or with no notifictaion
+// browser-sync start -p "http://blanco1:8888/" --files="**/*"  --no-notify

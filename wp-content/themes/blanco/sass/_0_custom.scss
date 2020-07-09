@@ -1,0 +1,220 @@
+//browser-sync notification pop-up
+#__bs_notify__ {
+  top: 50% !important;
+  right: 10px !important;
+  border-radius: 15px !important;
+  height: 50px !important;
+  background-color: $hover !important;
+  // TURN OFF ALLTOGETHER
+  display: none !important;
+}
+
+// or with no notifictaion
+// browser-sync start -p "http://blanco1:8888/" --files="**/*"  --no-notify
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.push-down {
+  flex: 1;
+}
+
+.button {
+  margin: 2rem 0 0;
+  padding: 0.5rem;
+
+  span {
+    padding: 0.25rem 0.75rem;
+    // border-radius: 10px;
+    background-color: $mauve;
+    color: white;
+    // @include b1();
+    line-height: 1;
+    @include fontSize(28px);
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    &:hover {
+      color: white;
+      background-color: $orange;
+    }
+  }
+}
+
+// FLEX -- FLEX -- FLEX -- FLEX -- FLEX -- FLEX --
+// FLEX -- FLEX -- FLEX -- FLEX -- FLEX -- FLEX --
+// FLEX -- FLEX -- FLEX -- FLEX -- FLEX -- FLEX --
+// GLOBALS -- GLOBALS -- GLOBALS --
+
+//full-bleed section, aligning title to center
+.full-width {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+// section flex row, column on mobile
+.section-row {
+  display: flex;
+  flex-direction: column;
+
+  @include media-lrg {
+    flex-direction: row;
+  }
+}
+
+// an absolute div to place our bkg img element in
+.background-image-cont {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  img {
+    object-fit: cover;
+    // object-position: center;
+    height: 100%;
+    // width: unset;
+  }
+}
+
+// ALL COLOR CLASSES -- ALL COLOR CLASSES -- ALL COLOR CLASSES --
+// ALL COLOR CLASSES -- ALL COLOR CLASSES -- ALL COLOR CLASSES --
+
+.mauve {
+  color: $mauve;
+}
+
+.white {
+  color: white;
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.purple {
+  color: #b7557b;
+}
+
+.aqua {
+  color: #88e3b3;
+}
+
+.grape {
+  color: #606380;
+}
+
+.cyan {
+  color: #00ffff;
+}
+
+.yellow {
+  color: #fed731;
+}
+
+.green {
+  color: #27d38c;
+}
+
+.ocean {
+  color: #42b8b2;
+}
+
+.darkgrey {
+  color: $darkgrey;
+}
+
+.pink-elephant-breathe {
+  color: $pink-elephant-breathe;
+}
+
+.sky {
+  color: $sky;
+}
+
+.light-ocean {
+  color: $light-ocean;
+}
+
+// Backgrounds---Backgrounds---Backgrounds---
+
+.bk-mauve {
+  background-color: $mauve;
+}
+
+.bk-blue {
+  background-color: $blue;
+}
+
+.bk-pink-elephant-breathe {
+  background-color: $pink-elephant-breathe;
+}
+
+.bk-hint-of-pink {
+  background-color: $hint-of-pink;
+}
+
+.bk-purple {
+  background-color: $purple;
+}
+
+.bk-aqua {
+  background-color: $aqua;
+}
+
+.bk-cyan {
+  background-color: $cyan;
+}
+
+.bk-yellow {
+  background-color: $yellow;
+}
+
+.bk-green {
+  background-color: $green;
+}
+
+.bk-darkgrey {
+  background-color: $darkgrey;
+}
+
+.bk-teal {
+  background-color: $teal;
+}
+
+.bk-fire-orange {
+  background-color: $fire-orange;
+}
+
+.bk-sky {
+  background-color: $sky;
+}
+
+.bk-light-ocean {
+  background-color: $light-ocean;
+}

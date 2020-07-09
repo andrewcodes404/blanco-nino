@@ -1,0 +1,74 @@
+//INFO GRAPHIC & CARD SECTION - INFO GRAPHIC & CARD SECTION
+//INFO GRAPHIC & CARD SECTION - INFO GRAPHIC & CARD SECTION
+//INFO GRAPHIC & CARD SECTION - INFO GRAPHIC & CARD SECTION
+//INFO GRAPHIC & CARD SECTION - INFO GRAPHIC & CARD SECTION
+
+.card-section {
+  // background-color: $hint-of-pink;
+  padding: 3rem 1rem;
+
+  @include media-lrg {
+    padding: 6rem 1rem;
+  }
+
+  h2 {
+    // color: $mauve;
+  }
+}
+
+.card-section-title {
+  max-width: 925px;
+  text-align: center;
+}
+
+.card-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+
+  @include media-med {
+    flex-wrap: nowrap;
+  }
+}
+
+.card {
+  width: 50%;
+  max-width: 260px;
+
+  @include media-med {
+    padding: 1rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  text-align: center;
+
+  img {
+    width: 50%;
+    margin: 0 auto;
+
+    @include media-med {
+      width: 80%;
+    }
+  }
+}
+
+.card-text {
+  text-align: center;
+
+  width: 96%;
+  margin: 0 auto;
+
+  @include media-med {
+    width: 80%;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}

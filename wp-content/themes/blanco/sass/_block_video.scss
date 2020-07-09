@@ -1,0 +1,88 @@
+
+.invest-hero-mobile {
+    @include media-med {
+        display: none;
+    }
+}
+
+.invest-hero-desktop {
+    display: none;
+    @include media-med {
+        display: flex;
+    }
+}
+
+
+.play-button-mobile {
+    @include media-med {
+        display: none;
+    }
+}
+
+.play-button-desktop {
+    display: none;
+    @include media-med {
+        display: block;
+    }
+}
+
+.play-button-mobile,
+.play-button-desktop {
+
+    width: 60px;
+    cursor: pointer;
+
+    @include media-sml {
+        width: 60px;
+        // @include b1();
+    }
+
+    &:hover {
+        border: 3px solid transparent;
+    }
+}
+
+
+.video-modal {
+
+    //app.js turns display: flex
+    display: none;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(black, .8);
+    transition: .4s;
+    cursor: pointer;
+
+    iframe {
+        width: 80%;
+        height: 80%;
+    }
+
+}
+
+
+
+.close-button {
+    display: none;
+
+    position: fixed;
+    top: 30px;
+    right: 60px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 3;
+    // transition: .2s;
+    &:hover {
+        border: 3px solid transparent;
+    }
+}

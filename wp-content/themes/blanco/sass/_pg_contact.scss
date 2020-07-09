@@ -1,0 +1,40 @@
+// FORM --- FORM --- FORM --- FORM --- FORM --- FORM ---
+// FORM --- FORM --- FORM --- FORM --- FORM --- FORM ---
+// FORM --- FORM --- FORM --- FORM --- FORM --- FORM ---
+
+.form-get-in-touch {
+  width: 95%;
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+.ninja-forms-form-wrap {
+  @include fontSize(20px);
+}
+
+.nf-field-element input {
+  max-width: 300px;
+  @include fontSize(20px);
+}
+
+#nf-field-17 {
+  padding: 0.25rem 0.75rem;
+  background-color: $pink;
+  color: white;
+  line-height: 1;
+  @include fontSize(28px);
+  font-weight: 600;
+  cursor: pointer;
+  border: unset;
+
+  &:hover {
+    color: white;
+    background-color: $orange;
+  }
+}
+
+.privacy-policy-cont {
+  width: 95%;
+  max-width: 800px;
+  margin: 4rem auto;
+}

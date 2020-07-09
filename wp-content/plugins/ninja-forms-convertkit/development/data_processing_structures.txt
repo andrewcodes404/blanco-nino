@@ -1,0 +1,134 @@
+{s"6:"contact";a:3:{
+        s:10:"first_name";s:5:"Testy";
+        s:9:"last_name";s:11:"McTesterton";
+        s:10:"email";a:2{
+            s:4;"home";s:13:"test@test.com";
+            s:4;"work;s:13:"test@test.com";
+        }
+    }
+}
+
+{
+    "contact":{
+        "first_name":"Testy",
+        "last_name":"McTesterton",
+        "emails":[
+            {
+            "type":"home",
+            "value":"test@test.com"
+            }
+        ]
+    }
+    "deal":{
+        
+    }
+}
+
+
+s:4:"body";s:5004:"{
+	"status":0,
+	"message":"Created",
+	"timestamp":1501766601,
+	"data":{
+		"contact":{
+			"id":"598323c9b503ae7d063de21d",
+			"first_name":"Testyx",
+			"last_name":"McTesterton",
+			"job_title":"",
+			"company_id":"5983218ab503ae7d063dd227",
+			"company_name":"Conglomo, Inc.",
+			"company_size":3,
+			"owner_id":"58740ec900d4afae367f2912",
+			"status":"Lead",
+			"status_id":"58740f0400d4afae367f2c3c",
+			"tags":[],
+			"starred":false,
+			"background":"",
+			"lead_source_id":"",
+			"pending_deal":false,
+			"total_pendings":0.0,
+			"photo_url":"",
+			"custom_fields":[],
+			"address_list":[{"address":"123 sesame street","city":"Peoria","state":"","zip_code":"","country_code":""}],
+			"letter":"m",
+			"urls":[{"type":"blog","value":"www.me.com"},{"type":"twitter","value":"twitteridme"}],
+			"phones":[{"type":"work","value":"5055551212"},{"type":"home","value":"5055551212"}],
+			"emails":[{"type":"work","value":"test@test.com"},{"type":"other","value":"myemailaddreess@myemail.com"}],
+			"sales_closed_for":[],
+			"closed_sales":[],
+			"created_at":"2017-08-03T13:23:21Z",
+			"modified_at":"2017-08-03T13:23:21Z"
+		},
+		"next_actions":[],
+		"next_action":{},
+		"queued_actions":[],
+		"next_action_conflicts":[],
+			
+		"company":{
+			"id":"5983218ab503ae7d063dd227",
+			"name":"Conglomo, Inc.",
+			"description":"",
+			"phone":"",
+			"url":"",
+			"company_fields":[],
+			"syncing_status":false,
+			"synced_status_id":null,
+			"syncing_tags":false,
+			"synced_tags":null,
+			"address":{"address":null,"city":null,"state":null,"zip_code":null,"country_code":null},
+			"created_at":"2017-08-03",
+			"contacts_count":3
+		}
+
+/* - from custom field request - */
+                	"custom_fields":[
+                        {"custom_field":{
+                                "id":"58740f0400d4afae367f2c45",
+                                "name":"Birthday",
+                                "type":"anniversary",
+                                "position":0,
+                                "reminder_days":0
+                        }},
+                        {"custom_field":{
+                                "id":"598cb02eeb89979398ce6461",
+                                "name":"RemodelOption",
+                                "type":"select_box",
+                                "position":1,
+                                "choices":[
+                                        "Kitchen",
+                                        "Bathroom",
+                                        "Deck"
+                                ]
+                        }},
+                        {"custom_field":{
+                                "id":"598cb077eb8997d28bcd1a6f",
+                                "name":"Add to mailing list?",
+                                "type":"multiple_choice",
+                                "position":2,
+                                "choices":[
+                                        "Yes"
+                                ]
+                        }},
+                        {"custom_field":{
+                                "id":"598cb095eb89979398ce6ff0",
+                                "name":"Number of people in household",
+                                "type":"number",
+                                "position":3
+                        }}
+	],
+	}";
+	},
+
+
+
+
+s:4:"body";s:259:"{
+	"status":400,
+	"message":"Invalid request data",
+	"error_name":"invalid_request_data",
+	"error_message":"A validation error has occurred",
+	"errors":{
+		"last_name":"Lastname or company name must be provided",
+		"company_name":"Lastname or company name must be provided"
+	}
+}";

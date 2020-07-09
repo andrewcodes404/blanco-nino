@@ -1,0 +1,191 @@
+.product-section {
+  width: 95%;
+  max-width: 800px;
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  @include media-sml {
+    width: 85%;
+  }
+  padding: 4rem 0;
+  @include media-med {
+    flex-direction: row;
+
+    width: 70%;
+    padding: 3rem 0;
+  }
+}
+
+.product-text-cont {
+  margin: 0 auto;
+  width: 95%;
+
+  @include media-med {
+    width: 60%;
+    padding: 0 2rem;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.product-title {
+  margin: 2rem 0;
+  width: 100%;
+
+  @include media-med {
+    margin: 1rem 0;
+  }
+}
+
+// flipping the FLEX on odd
+.product-section-wrapper:nth-child(odd) {
+  .product-section {
+    @include media-med {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+//The text and map flex box
+.product-text-map-flex {
+  display: flex;
+}
+
+.product-map {
+  display: none;
+  @include media-lrg-xl {
+    display: block;
+    width: 35%;
+  }
+
+  padding-top: 18px;
+  padding-left: 18px;
+  // padding: 1rem .75rem 0;
+}
+
+//The text and map flex box FLIP ON EVEN
+
+.product-section-wrapper:nth-child(even) {
+  .product-section {
+    .product-text-cont {
+      .product-text-map-flex {
+        flex-direction: row-reverse;
+        .product-map {
+          padding-left: 0px;
+          padding-right: 18px;
+        }
+      }
+    }
+  }
+}
+
+.product-text {
+  color: white;
+  width: 100%;
+
+  h3 {
+    font-weight: bold;
+  }
+
+  @include media-lrg-xl {
+    max-width: 280px;
+    width: 65%;
+    padding-top: 1rem;
+  }
+}
+
+.product-pack-image {
+  margin: 0 auto;
+  width: 85%;
+  max-width: 350px;
+
+  @include media-med {
+    max-width: unset;
+    width: 40%;
+    padding: 0;
+    max-width: 260px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// .tortilla-section4 {
+//     // min-height: 650px;
+//     // height: 85vh;
+
+//     width: 70%;
+//     margin: 0 auto;
+//     // padding: 2rem 0;
+
+//     // h2{
+//     //     color: white;
+//     //     text-align: center;
+//     // }
+//     justify-content: center;
+// }
+
+// .try-this {
+//     background-color: $purple;
+// }
+
+// .tortilla-section4-text,
+// .tortilla-section4-img {
+//     // @include b1();
+//     // width:40%;
+
+// }
+
+// .tortilla-section4-text {
+//     // align-items: flex-end;
+//     // width: 35%;
+//     text-align: center;
+// }
+
+// .tortilla-section4-img {
+
+//     // justify-content:center;
+//     // align-items: flex-start;
+
+//     img {
+//         // @include b1();
+//         width: 80%;
+//     }
+// }
+
+// .tortilla-section5 {
+//     background-image: url("../images/photos/ruth1.jpg");
+//     position: relative;
+// }
+
+// .tortilla-section5-text {
+//     position: absolute;
+//     bottom: 20%;
+
+//     width: 90%;
+
+//     h1 {
+//         font-size: 2.5rem;
+
+//         a {
+//             color: white;
+//         }
+//     }
+
+//     @include media-sml {
+//         width: 85%;
+//         max-width: 850px;
+
+//         h1 {
+//             font-size: 4rem;
+//         }
+//     }
+
+//     // @include b1();
+
+// }

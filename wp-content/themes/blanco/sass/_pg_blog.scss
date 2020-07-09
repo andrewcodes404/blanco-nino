@@ -1,0 +1,217 @@
+.blog-home-poster {
+  filter: brightness(0.75);
+}
+
+.blog-section-wrapper {
+  @include media-lrg {
+    margin: 2rem 0;
+  }
+}
+
+.blog-section-row {
+  margin: 1rem 0;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include media-med {
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  @include media-lrg {
+    // margin: 3rem auto;
+  }
+}
+
+// flip every other row
+.blog-section-row:nth-child(odd) {
+  @include media-med {
+    flex-direction: row-reverse;
+  }
+}
+
+.blog-section-text,
+.blog-section-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  // padding: 2rem 0;
+  width: 100%;
+  // background-size: cover;
+  // background-position: center;
+  position: relative;
+
+  @include media-med {
+    width: 50%;
+    min-height: 360px;
+    height: 50vh;
+  }
+
+  // background-color: $pink-elephant-breathe;
+  // background-color: red;
+
+  p {
+    color: white;
+  }
+
+  h2 {
+    @include fontSize(36px);
+    text-transform: uppercase;
+    color: white;
+  }
+
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+//make the text sit on img in mobile
+.blog-section-text {
+  position: absolute;
+  background-color: rgba(black, 0.2);
+  top: 0;
+  left: 0;
+  right: 0;
+  down: 0;
+
+  @include media-med {
+    position: unset;
+    width: 50%;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+  }
+}
+
+//change bc and font color
+
+.white {
+  color: white;
+}
+
+.blog-section-row:nth-child(3n + 1) {
+  .blog-section-text {
+    @include media-med {
+      background-color: #d69ead;
+      background-image: url("../images/graphics/blog-pink.jpg");
+    }
+  }
+}
+
+.blog-section-row:nth-child(3n + 2) {
+  .blog-section-text {
+    @include media-med {
+      background-image: url("../images/graphics/blog-blue.jpg");
+      background-color: #40a9dd;
+
+      h2 {
+        &:hover {
+          color: $cyan;
+        }
+      }
+    }
+  }
+}
+
+.blog-section-row:nth-child(3n + 3) {
+  .blog-section-text {
+    @include media-med {
+      background-image: url("../images/graphics/blog-ocean.jpg");
+      background-color: #88e3b3;
+
+      h2 {
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+// SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP ---
+// SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP ---
+// SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP ---
+// SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP --- SINGLE.PHP ---
+
+.single-cont {
+  max-width: 650px;
+  width: 95%;
+  margin: 8rem auto;
+
+  @include media-lrg {
+    margin: 4rem auto;
+  }
+
+  // @include b1();
+
+  h1 {
+    @include fontSize(40px);
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    // text-decoration: underline;
+    text-align: unset;
+    margin-bottom: 2rem;
+
+    @include media-lrg {
+      @include fontSize(50px);
+    }
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    text-align: left;
+    @include fontSize(22px);
+
+    @include media-lrg {
+      @include fontSize(30px);
+    }
+  }
+
+  img {
+    // @include b1();
+    margin-bottom: 2rem;
+  }
+}
+
+.wp-block-separator {
+  margin: 4rem 0;
+  border-color: $cyan;
+}
+
+.pagination {
+  width: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.nav-previous,
+.nav-next {
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    text-decoration: none;
+    color: $darkgrey;
+    transition: 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
