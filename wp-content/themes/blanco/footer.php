@@ -145,7 +145,7 @@
 
 
         <div class="newsletter">
-
+            <h4>Hear the latest news</h4>
             <div class="newsletter__form">
 
                 <?php echo do_shortcode( '[ninja_form id=4]' ); ?>

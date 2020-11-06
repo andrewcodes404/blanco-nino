@@ -15,7 +15,7 @@
             <div class="background-image-cont">
                 <?php 
                     $image = get_field('poster_left_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 
@@ -35,7 +35,7 @@
             <div class="background-image-cont">
                 <?php 
                     $image = get_field('poster_right_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 

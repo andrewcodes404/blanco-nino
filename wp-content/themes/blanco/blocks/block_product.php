@@ -9,26 +9,26 @@
                 <img src="<?php echo $productImage['url']?>" alt="<?php echo $productImage['alt'] ?>" />
             </div>
 
-                <div class="product-text-map-flex">
+            <div class="product-text-map-flex">
 
-                    <div class="product-text">
-                        <h3><?php the_field('product_sub_title')  ?></h3>
-                        <?php the_field('product_description')?>
-                    </div>
-
-                    <div class="product-map">
-                        <?php $mapImage = get_field('product_map_image'); ?>
-                        <img src="<?php echo $mapImage['url']?>" alt="<?php echo $mapImage['alt'] ?>" />
-                    </div>
-
+                <div class="product-text">
+                    <h3><?php the_field('product_sub_title')  ?></h3>
+                    <?php the_field('product_description')?>
                 </div>
+
+                <div class="product-map">
+                    <?php $mapImage = get_field('product_map_image'); ?>
+                    <img src="<?php echo $mapImage['url']?>" alt="<?php echo $mapImage['alt'] ?>" />
+                </div>
+
+            </div>
         </div>
 
 
         <div class="product-pack-image">
-        <?php 
+            <?php 
                     $image = get_field('product_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 

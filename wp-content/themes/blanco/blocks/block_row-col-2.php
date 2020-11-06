@@ -13,12 +13,12 @@
             <h2 class="<?php echo the_field('row_col_2_title_color')?>">
                 <?php the_field('row_col_2_title'); ?>
             </h2>
-          <br>
+            <br>
 
-          <div class="<?php echo the_field('row_col_2_body_color')?>">
-          
-          <?php the_field('row_col_2_body_text'); ?>
-          </div>
+            <div class="<?php echo the_field('row_col_2_body_color')?>">
+
+                <?php the_field('row_col_2_body_text'); ?>
+            </div>
 
             <!-- <h3 class="<?php echo the_field('row_col_2_body_color')?>">
                 <?php the_field('row_col_2_strapline'); ?>
@@ -32,11 +32,11 @@
 
 
             <?php if( get_field('row_col_2_link_text') ): ?>
-       
-                <span class="<?php echo the_field('row_col_2_body_color')?>">
-                    <a
-                        href="<?php the_field('row_col_2_link_address')?>"><?php the_field('row_col_2_link_text') ?><span>&rarr;</a></span>
-                </span>
+
+            <span class="<?php echo the_field('row_col_2_body_color')?>">
+                <a
+                    href="<?php the_field('row_col_2_link_address')?>"><?php the_field('row_col_2_link_text') ?><span>&rarr;</a></span>
+            </span>
             </h3>
             <?php endif; ?>
 
@@ -46,7 +46,7 @@
                 <a href="<?php the_field('row_col_2_link_address')?>" target="_blank">
                     <?php 
                     $image = get_field('row-col-2_link_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 
@@ -80,7 +80,7 @@
             <?php if( get_field('row_col_2_text_background') ): ?>
             <?php 
                     $image = get_field('row_col_2_text_background');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 
@@ -100,7 +100,7 @@
         <div class="background-image-cont">
             <?php 
                     $image = get_field('row_col_2_image');
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
                     if( $image ) {
                         echo wp_get_attachment_image( 
                             $image['id'], 

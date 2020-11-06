@@ -21,6 +21,9 @@ add_theme_support('title-tag');
 // }
 // add_action( 'after_setup_theme', 'blanco' );
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'larger', 1400, 1400, true );
+
 
 
 // CSS
@@ -37,4 +40,3 @@ require_once( get_template_directory() . '/functions/fn-blog.php' );
 
 //GUTENBERG BLOCKS
 require_once( get_template_directory() . '/functions/fn-blocks.php' );
-

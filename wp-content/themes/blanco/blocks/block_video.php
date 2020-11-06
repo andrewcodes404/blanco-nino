@@ -1,7 +1,6 @@
 <!-- THE VIDEO MODAL -- THE VIDEO MODAL --  -->
-<div class="video-modal">
-    <!-- <iframe src="https://player.vimeo.com/video/315517029" frameborder="0" webkitallowfullscreen mozallowfullscreen
-        allowfullscreen></iframe> -->
+
+<div class="video-modal" id="<?php  the_field('video_url') ?>">
 </div>
 
 <div class="close-button">
@@ -9,11 +8,11 @@
 </div>
 
 <!-- HERO MOBILE -- HERO MOBILE --  -->
-<div class="full-width invest-hero-mobile">
+<div class="full-width invest-hero-mobile ">
     <div class="play-button-mobile">
-        <a href="<?php the_field('video_url')?>" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/graphics/video-play-button.png" alt="">
-        </a>
+
+        <img src="<?php echo get_template_directory_uri(); ?>/images/graphics/video-play-button.png" alt="">
+
     </div>
 
     <div class="background-image-cont <?php echo the_field('text_background_choice') ?>">

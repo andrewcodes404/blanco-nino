@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php include "inc/nav.php";?>
-<div class="height-for-nav"></div>
+<!-- <div class="height-for-nav"></div> -->
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

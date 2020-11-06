@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <?php include "inc/nav.php";?>
-<div class="height-for-nav"></div>
+<!-- <div class="height-for-nav"></div> -->
 
 <div class="full-width ">
     <div class="container text-center ">
@@ -30,12 +30,6 @@
 
 <div class="blog-section-wrapper">
 
-    <?php if ( have_posts() ) : ?>
-
-    <!-- Add the pagination functions here. -->
-
-    <!-- Start of the main loop. -->
-
     <?php while (have_posts()): the_post();?>
 
     <div class="blog-section-row">
@@ -62,21 +56,12 @@
                             array ('title' => $image['title'], 'alt' => $image['alt']));
                 ?>
             </div>
-
+            
         </div>
     </div>
 
     <?php endwhile;?>
-    <!-- End of the main loop -->
 
-    <!-- Add the pagination functions here. -->
-    <div class="pagination">
-        <div class="nav-previous alignleft"><?php previous_posts_link( '&#8592;  Newer posts' ); ?></div>
-        <div class="nav-next alignright"><?php next_posts_link( 'Older posts  &#8594;' ); ?></div>
-    </div>
-    <?php else : ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-    <?php endif; ?>
 </div>
 
 

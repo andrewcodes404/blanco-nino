@@ -14,4 +14,9 @@
 @import "block_product";
 
 @import "pg_blog";
-@import "pg_contact"
+@import "pg_contact";
+
+// shopify
+.shopify-buy-frame--product {
+    margin: 0 auto;
+}

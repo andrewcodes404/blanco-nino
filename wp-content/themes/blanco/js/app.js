@@ -1,12 +1,16 @@
 jQuery(document).ready(function($) {
   // NAV STUFF
+
+  const test = document.querySelector('.nav-menu-mobile')
+
+  console.log("test = ", test);
   $(".nav-menu-mobile").hide();
   var btn = $(".menu-btn");
   btn.addClass("fa-bars");
   btn.click(function() {
     //toggle slide the mob-menu
     $(".nav-menu-mobile").slideToggle("slow", function() {});
-
+    console.log("test = ", test);
     //change class of font-awesome icon
     if (btn.hasClass("fa-bars")) {
       btn.addClass("fade-out");
@@ -28,14 +32,31 @@ jQuery(document).ready(function($) {
 
   
   var videoBtn = $(".invest-hero-desktop");
+  var videoBtnMob  = $(".invest-hero-mobile");
   var videoModal = $(".video-modal");
+
+const videoID  = videoModal.attr("id");
+  
+  
+  console.log("videoID  = ", videoID );
   var closeBtn = $(".close-button");
 
   videoBtn.click(function() {
     videoModal.css("display", "flex");
     videoModal.addClass("fade-in");
     videoModal.html(
-      '<iframe src="https://player.vimeo.com/video/315517029" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+      '<iframe src="https://player.vimeo.com/video/'+  videoID  +'" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
+    );
+    closeBtn.css("display", "block");
+
+    console.log("video button clicked");
+  });
+
+  videoBtnMob.click(function() {
+    videoModal.css("display", "flex");
+    videoModal.addClass("fade-in");
+    videoModal.html(
+      '<iframe src="https://player.vimeo.com/video/'+  videoID  +'" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>'
     );
     closeBtn.css("display", "block");
 
@@ -56,9 +77,5 @@ jQuery(document).ready(function($) {
     }, 300);
   });
 
-  // videoModal.click(function() {
-  //   videoModal.css("display", "none");
-  //   // videoModal.removeClass("fade-in");
-  //   // videoModal.addClass("fade-out");
-  // });
 });
+
