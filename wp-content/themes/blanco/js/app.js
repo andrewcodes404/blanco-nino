@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
   const test = document.querySelector('.nav-menu-mobile')
 
-  console.log("test = ", test);
+  
   $(".nav-menu-mobile").hide();
   var btn = $(".menu-btn");
   btn.addClass("fa-bars");
@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 const videoID  = videoModal.attr("id");
   
   
-  console.log("videoID  = ", videoID );
+ 
   var closeBtn = $(".close-button");
 
   videoBtn.click(function() {

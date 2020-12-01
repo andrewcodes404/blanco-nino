@@ -79,6 +79,17 @@ body {
   }
 }
 
+.hero-full-width{
+  min-height: 450px;
+ @include media-med{
+  min-height: 600px;
+ }
+}
+
+.hero-title-image{
+  margin-top: 60px;
+}
+
 // an absolute div to place our bkg img element in
 .background-image-cont {
   position: absolute;
@@ -94,6 +105,8 @@ body {
     height: 100%;
     // width: unset;
   }
+
+ 
 }
 
 // ALL COLOR CLASSES -- ALL COLOR CLASSES -- ALL COLOR CLASSES --

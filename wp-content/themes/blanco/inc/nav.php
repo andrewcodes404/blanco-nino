@@ -21,7 +21,9 @@
 
 
 
-    <div class="nav-menu-desktop  nav-home">
+    <div class="nav-menu-desktop  <?php if (!is_single()) : echo 'nav-home';
+                                    else : echo 'nav-single';
+                                    endif; ?> ">
 
         <?php
         $menuParameters = array(
@@ -34,22 +36,21 @@
         ?>
 
 
-        <!-- <div class="nav-logo <?php if (is_front_page()) : echo 'nav-logo-lrg';
-                                else : echo 'nav-logo-sml';
-                                endif; ?> "> -->
+        <!-- <div class="nav-logo"> -->
 
-        <div class="nav-logo nav-logo-lrg">
+        <div class="nav-logo  <?php if (!is_single()) : echo 'nav-logo-lrg';
+                                else : echo 'nav-logo-sml';
+                                endif; ?> ">
 
 
 
             <a href="<?php echo get_home_url(); ?>">
-                <!-- <img src="<?php echo get_template_directory_uri(); ?>/images/graphics/<?php if (is_front_page()) : echo 'logo-nav-home.png';
+                <img src="<?php echo get_template_directory_uri(); ?>/images/graphics/<?php if (!is_single()) : echo 'logo-nav-home.png';
                                                                                         else : echo 'logo-nav.png';
                                                                                         endif; ?> "
-                        alt="Blanco Nino Logo"> -->
-
-                <img src="<?php echo get_template_directory_uri(); ?>/images/graphics/logo-nav-home.png"
                     alt="Blanco Nino Logo">
+
+
             </a>
         </div>
 

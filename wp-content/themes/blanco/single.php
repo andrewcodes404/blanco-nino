@@ -6,6 +6,7 @@
 
 <div class="single-container">
 
+
     <div class="single-cont">
         <h1><?php the_title()?></h1>
 
